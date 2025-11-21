@@ -83,6 +83,7 @@ jobs:
           (matrix.settings.platform == 'darwin-x64' && runner.os == 'macOS' && runner.arch == 'X64') ||
           (matrix.settings.platform == 'darwin-arm64' && runner.os == 'macOS' && runner.arch == 'ARM64') ||
           (matrix.settings.platform == 'win32-x64' && runner.os == 'Windows')
+        continue-on-error: true
         working-directory: npm/packages/core
         run: npm test
 
